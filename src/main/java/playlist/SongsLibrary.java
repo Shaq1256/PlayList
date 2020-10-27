@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class SongsLibrary {
     private ArrayList<Song> songsList;
 
-    public SongsLibrary(ArrayList<Song> songsList) {
-        this.songsList = songsList;
+    public SongsLibrary() {
+        this.songsList = new ArrayList<Song>();
     }
 
     public ArrayList<Song> getSongsList() {

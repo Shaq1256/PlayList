@@ -31,12 +31,10 @@ public class Song {
 
     @Override
     public String toString() {
-        return "Song{" +
-                "title='" + title + '\'' +
-                ", album='" + album + '\'' +
-                ", artist='" + artist + '\'' +
-                ", duration=" + duration +
-                '}';
+        return "title: '" + title + '\'' +
+                ", album: '" + album + '\'' +
+                ", artist: '" + artist + '\'' +
+                ", duration: " + duration;
     }
 
     @Override
