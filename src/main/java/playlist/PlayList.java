@@ -1,5 +1,6 @@
 package playlist;
 
+import java.security.spec.RSAOtherPrimeInfo;
 import java.util.Scanner;
 
 public class PlayList {
@@ -12,13 +13,17 @@ public class PlayList {
     public void playLista() {
         songsLibrary.addSong("November Rain", "Gunns", "Gunns and Roses", 1.45);
         songsLibrary.addSong("Nothing else matters", "Black", "Mettalica", 2.00);
+        songsLibrary.addSong("Sen o Victorii", "Dzem", "Dzem", 2.20);
+        songsLibrary.addSong("Marchewkowe pole", "Punk", "Lady Pank", 2.45);
+        songsLibrary.addSong("Nothing else matters", "Black", "Mettalica", 2.15);
         songsLibrary.showSongsList();
     }
 
     public void playSong() {
-        songsLibrary.addSong("November Rain", "Gunns", "Gunns and Roses", 1.45);
-        songsLibrary.addSong("Nothing else matters", "Black", "Mettalica", 2.00);
-        System.out.println("Now playing: " + "\n" + songsLibrary.getSongsList().get(0));
+        int play = 0;
+        playLista();
+        System.out.println("");
+        System.out.println("Now playing: " + "\n" + songsLibrary.getSongsList().get(play));
 
         while (!quit) {
             printPlaySongMenu();
@@ -28,12 +33,24 @@ public class PlayList {
 
             switch (action) {
                 case 1:
-                    System.out.println("Now playing: " + "\n" + songsLibrary.getSongsList().get(1));
-                    break;
+                    if (play < songsLibrary.getSongsList().size()) {
+                        System.out.println("Now playing: " + "\n" + songsLibrary.getSongsList().get(play++));
+                        break;
+                    } else {
+                        play = 0;
+                        System.out.println("End of play list.");
+                        break;
+                    }
 
                 case 2:
-                    System.out.println("Now playing: " + "\n" + songsLibrary.getSongsList().get(0));
-                    break;
+                    if (play >= 0) {
+                        System.out.println("Now playing: " + "\n" + songsLibrary.getSongsList().get(play--));
+                        break;
+                    } else {
+                        play = 0;
+                        System.out.println("End of play list.");
+                        break;
+                    }
 
                 case 3:
                     quit = true;
