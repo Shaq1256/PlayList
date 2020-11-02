@@ -29,6 +29,22 @@ public class Song {
         return duration;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAlbum(String album) {
+        this.album = album;
+    }
+
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
+
+    public void setDuration(double duration) {
+        this.duration = duration;
+    }
+
     @Override
     public String toString() {
         return "title: '" + title + '\'' +

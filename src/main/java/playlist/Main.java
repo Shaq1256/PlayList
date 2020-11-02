@@ -21,7 +21,7 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.println("case 1");
+                    playList.addSong();
                     break;
 
                 case 3:

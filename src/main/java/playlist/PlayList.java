@@ -1,6 +1,6 @@
 package playlist;
 
-import java.security.spec.RSAOtherPrimeInfo;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class PlayList {
@@ -57,6 +57,13 @@ public class PlayList {
                     break;
             }
         }
+
+    }
+
+    public void addSong() {
+        AddASong addASong = new AddASong();
+        songsLibrary.addSong(addASong.enterTitle(), addASong.enterAlbum(), addASong.enterArtist(), addASong.enterDuration());
+        songsLibrary.showSongsList();
 
     }
 
