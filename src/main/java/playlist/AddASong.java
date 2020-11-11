@@ -7,6 +7,7 @@ public class AddASong {
     double duration;
     Scanner scanner = new Scanner(System.in);
 
+
     public String enterTitle() {
         System.out.println("Enter title of a song:\r");
         title = scanner.nextLine();

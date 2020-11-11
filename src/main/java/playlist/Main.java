@@ -1,13 +1,21 @@
 package playlist;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         Scanner scanner = new Scanner(System.in);
         boolean quit = false;
         boolean next = true;
         PlayList playList = new PlayList();
+
+        File file = new File("C:\\Users\\Lukasz\\IdeaProjects\\MyProjects\\Playlist\\playlista.txt");
+        Scanner in = new Scanner(file);
+
+        String zadanie = in.nextLine();
+        System.out.println(zadanie);
 
         while (!quit) {
             printPlayListMenu();
@@ -37,14 +45,6 @@ public class Main {
                     break;
             }
         }
-
-
-//        SongsLibrary songsLibrary = new SongsLibrary();
-//        songsLibrary.addSong("November Rain", "Gunns", "Gunns and Roses", 1.45);
-//        songsLibrary.addSong("Nothing else matters", "Black", "Mettalica", 2.00);
-//        songsLibrary.showSongsList();
-
-
     }
 
 

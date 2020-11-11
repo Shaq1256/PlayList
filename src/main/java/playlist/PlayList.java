@@ -1,5 +1,7 @@
 package playlist;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -60,10 +62,14 @@ public class PlayList {
 
     }
 
-    public void addSong() {
-        AddASong addASong = new AddASong();
-        songsLibrary.addSong(addASong.enterTitle(), addASong.enterAlbum(), addASong.enterArtist(), addASong.enterDuration());
-        songsLibrary.showSongsList();
+    public void addSong() throws FileNotFoundException {
+//        AddASong addASong = new AddASong();
+//        songsLibrary.addSong(addASong.enterTitle(), addASong.enterAlbum(), addASong.enterArtist(), addASong.enterDuration());
+//        songsLibrary.showSongsList();
+
+        PrintWriter zapis = new PrintWriter("playlista.txt");
+        zapis.println("Ala ma kota, a kot ma Ale");
+        zapis.close();
 
     }
 
